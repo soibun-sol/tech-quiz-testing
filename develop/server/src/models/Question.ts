@@ -1,4 +1,4 @@
-import { Schema, model, type Document } from 'mongoose';
+import { Schema, model } from 'mongoose';
 
 interface IAnswer extends Document {
   text: string;
@@ -21,4 +21,5 @@ const QuestionSchema = new Schema<IQuestion>({
 });
 
 const Question = model<IQuestion>('Question', QuestionSchema);
-export { IQuestion, Question };
+export { IQuestion, QuestionSchema };
+export default Question;
